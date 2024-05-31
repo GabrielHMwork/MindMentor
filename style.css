@@ -1,0 +1,204 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fefefe;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos da Barra de Navegação */
+header {
+    background-color: #ffebee; /* Pastel vermelho claro */
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #ffab40; /* Pastel laranja médio */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ffccbc; /* Pastel vermelho médio */
+    border-radius: 5px;
+}
+
+/* Menu Toggle */
+.menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Estilos da Seção Hero */
+.hero {
+    position: relative;
+    background-color: #ffebee;
+    color: #333;
+    text-align: center;
+    padding: 100px 20px;
+    overflow: hidden;
+}
+
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero-buttons .cta {
+    background-color: #ffccbc; /* Pastel laranja claro */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-buttons .cta:hover {
+    background-color: hsl(332, 100%, 90%); /* Pastel laranja médio */
+}
+
+.hero-buttons button {
+    background-color: transparent;
+    border: 2px solid #ffc0cb; /* Pastel laranja claro */
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-buttons button:hover {
+    background-color: hsl(332, 100%, 90%) /* Pastel laranja claro */
+}
+
+/* Estilos do Footer */
+footer {
+    background-color: #ffebee; /* Pastel azul muito claro */
+    color: #333;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+footer ul li a {
+    color: #333;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #ffab40; /* Pastel laranja médio */
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    #menu-toggle:checked + ul {
+        display: flex;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons button,
+    .hero-buttons .cta {
+        width: 100%;
+        max-width: 300px;
+    }
+}
